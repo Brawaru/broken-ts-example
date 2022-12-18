@@ -1,0 +1,34 @@
+{
+  "name": "@braw/broken-ts-example",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Test project demonstrating a problem with TypeScript declaration compilation",
+  "license": "MIT",
+  "sideEffects": false,
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "prepack": "npm run build"
+  },
+  "devDependencies": {
+    "prettier": "^2.8.1",
+    "prettier-plugin-jsdoc": "^0.4.2",
+    "typescript": "^4.9.4"
+  },
+  "dependencies": {
+    "@formatjs/icu-messageformat-parser": "^2.1.14",
+    "vue": "2.7"
+  }
+}
